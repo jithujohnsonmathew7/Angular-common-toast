@@ -1,0 +1,29 @@
+<div class="toasterMain color-white p-fixed bg-job-card w-350" *ngIf="isToastMessageOpen" [ngClass]="{
+    success: toasterType =='success',
+    error: toasterType =='error',
+    warning: toasterType =='warning'}">
+    <div class="flex-row mainContainer">
+        <span *ngIf=" toasterType =='success'">
+            <svg class="icon-24 succesSvg">
+                <use xlink:href="assets/icons/icon-sprite.svg#ok2-Icon" />
+            </svg>
+        </span>
+        <span *ngIf="toasterType =='error' || toasterType =='warning'">
+            <svg class="icon-24" [ngClass]="toasterType =='warning'? 'warningSvg':'errorSvg' ">
+                <use xlink:href="assets/icons/icon-sprite.svg#info-icon" />
+            </svg>
+        </span>
+        <span class="">
+            {{ toasterMessgae }}
+        </span>
+        <span (click)="closeToast()" class="closeToasterMsg p-absolute">
+            <svg class="icon-14 color-white icon-fill-light">
+                <use xlink:href="assets/icons/icon-sprite.svg#close-Icon" />
+            </svg>
+        </span>
+        <span *ngIf="toasterType =='error' || toasterType =='warning'">
+        </span>
+
+    </div>
+
+</div>

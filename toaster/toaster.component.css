@@ -1,0 +1,44 @@
+.toasterMain{
+    height: 50px;
+    z-index: 10;
+    right: 10px;
+    top:60px;
+}
+.closeToasterMsg{
+    right: 10px;
+    top: 5px;
+}
+
+.mainContainer{
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+.success {
+    border: 1px solid var(--light-green);
+}
+
+.error{
+    border: 1px solid  #FF4A4A;
+}
+
+
+.warning{
+    border: 1px solid #FFCD1E;
+
+}
+
+.succesSvg {
+    color: var(--light-green);
+}
+
+.errorSvg {
+    color: #FF4A4A;
+}
+
+.warningSvg {
+    color: #FFCD1E;
+}
+.w-350 {
+    width: 350px;
+}
